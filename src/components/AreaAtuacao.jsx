@@ -172,7 +172,7 @@ const AreaAtuacao = () => {
             justifyContent: 'center',
           }}
         >
-          &#62;
+          &#62; 
         </button>
       </div>
     </div>

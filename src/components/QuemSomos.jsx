@@ -9,7 +9,7 @@ const QuemSomos = () => {
         textAlign: 'center',
         height: '100vh',
         paddingLeft: '5%',
-      }}
+      }} 
     >
       <h1 style={{ color: '#000000' }}>O CODANDO</h1>
       <p style={{ color: '#000000' }}>
