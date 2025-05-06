@@ -2,10 +2,10 @@ import { Button } from "@mui/material";
 import Header from './components/Header.jsx'
 import QuemSomos from './components/QuemSomos.jsx'
 import NossosPilares from './components/NossosPilares.jsx'
-import Projetos from './components/Projetos.jsx'
 import Eventos from './components/Eventos.jsx'
 import FAQ from './components/FAQ.jsx'
 import AreaAtuacao from './components/AreaAtuacao.jsx'
+import Cody from './components/Cody.jsx'
 import './App.css'
 
 function App() {
@@ -112,8 +112,13 @@ function App() {
       <div style={{backgroundColor: "#F8F8F8"}}>  
         <AreaAtuacao/>
       </div>   
+      
       <NossosPilares/>
-      <Projetos/>
+
+      <div style={{backgroundColor: "#F8F8F8"}}>  
+        <Cody/>
+      </div>
+      
       <Eventos/>
       <FAQ/>
     </div> 
