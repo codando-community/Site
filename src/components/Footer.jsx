@@ -4,63 +4,77 @@ const Footer = () => {
       style={{
         position: "relative",
         background: "linear-gradient(to right, #010A2A, #154747)",
-        padding: "10px",
-        height: "200px",
+        padding: "5px",
+        height: "auto",
         fontFamily: "'Montserrat', sans-serif",
       }}
     >
-      <div
-        style={{
-          position: "absolute",
-          top: "50%",
-          left: "0",
-          transform: "translateY(-50%)",
-          paddingLeft: "20px",
-        }}
-      >
+      <div className="footer-container">
         <img
           src="/src/assets/icon-codando.svg"
           alt="Codando"
-          style={{ width: "300px", height: "81px" }}
+          style={{
+            maxWidth: "350px",
+            width: "100%",
+            height: "auto",
+            minWidth: "100px",
+          }}
         />
+        <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
+          <a
+            href="https://www.instagram.com/codando.community/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/src/assets/icon-instagram.svg"
+              alt="Instagram"
+              style={{ width: "60px", height: "50px", maxWidth: "100%" }}
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/company/codando-community/posts/?feedView=all"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/src/assets/icon-linkedin.svg"
+              alt="LinkedIn"
+              style={{ width: "60px", height: "50px", maxWidth: "100%" }}
+            />
+          </a>
+          <a
+            href="mailto:codando.community@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/src/assets/icon-email.svg"
+              alt="Email"
+              style={{ width: "60px", height: "50px", maxWidth: "100%" }}
+            />
+          </a>
+          <a
+            href="https://discord.com/invite/MvtgmhPSrx"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/src/assets/icon-discord.svg"
+              alt="Discord"
+              style={{ width: "60px", height: "50px", maxWidth: "100%" }}
+            />
+          </a>
+        </div>
       </div>
 
       <div
-        style={{
-          display: "flex",
-          justifyContent: "flex-end",
-          gap: "10px",
-          padding: "30px 20px",
-        }}
-      >
-        <img
-          src="/src/assets/icon-instagram.svg"
-          alt="Instagram"
-          style={{ width: "60px", height: "50px" }}
-        />
-        <img
-          src="/src/assets/icon-linkedin.svg"
-          alt="LinkedIn"
-          style={{ width: "60px", height: "50px" }}
-        />
-        <img
-          src="/src/assets/icon-email.svg"
-          alt="Email"
-          style={{ width: "60px", height: "50px" }}
-        />
-        <img
-          src="/src/assets/icon-discord.svg"
-          alt="Discord"
-          style={{ width: "60px", height: "50px" }}
-        />
-      </div>
-
-      <div
+        className="footer-contact"
         style={{
           textAlign: "right",
           color: "#FFC42E",
           fontSize: "20px",
-          padding: "0 20px",
+          paddingRight: "20px",
         }}
       >
         Entre em contato conosco
@@ -74,8 +88,40 @@ const Footer = () => {
           marginTop: "10px",
         }}
       >
-        &copy; {new Date().getFullYear()} Codando. Todos os direitos reservados.
+        &copy; {new Date().getFullYear()} Codando Community. Todos os direitos
+        reservados.
       </div>
+
+      <style jsx>{`
+        .footer-container {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 30px 20px;
+          gap: 20px;
+          flex-wrap: wrap;
+          max-width: 100%;
+          box-sizing: border-box;
+        }
+
+        @media (max-width: 600px) {
+          .footer-container {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 20px;
+          }
+          .footer-container > img,
+          .footer-container > div {
+            margin: 0 auto;
+          }
+          .footer-contact {
+            text-align: center !important;
+            padding: 0 !important;
+          }
+        }
+      `}</style>
     </footer>
   );
 };
