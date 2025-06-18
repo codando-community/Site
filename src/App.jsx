@@ -10,6 +10,7 @@ import './App.css'
 
 function App() {
   return (
+    
     <div style={{ backgroundColor: "#141648" }}>
       <Header/>
       <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", height: "100vh", marginTop: '200px', backgroundColor: "#141648" }}>
@@ -111,17 +112,20 @@ function App() {
 
       <div style={{backgroundColor: "#F8F8F8"}}>  
         <AreaAtuacao/>
-      </div>   
-      
-      <NossosPilares/>
+      </div>  
+
+      <div><NossosPilares/></div>
+        
+     
 
       <div style={{backgroundColor: "#F8F8F8"}}>  
         <Cody/>
-      </div>
+      </div> 
       
       <Eventos/>
       <FAQ/>
-    </div> 
+      </div> 
+     
   )
 }
 

@@ -30,6 +30,7 @@ const Cody = () => {
           gap: "40px",
           marginTop: "20px",
           flexWrap: "wrap",
+
         }}
       >
         <div
@@ -39,7 +40,7 @@ const Cody = () => {
             alignItems: "center",
           }}
         >
-          <img
+          <img 
             src={codyImage}
             alt="Cody"
             style={{
@@ -53,6 +54,7 @@ const Cody = () => {
           style={{
             maxWidth: "400px",
             textAlign: "left",
+            
           }}
         >
           <p>
