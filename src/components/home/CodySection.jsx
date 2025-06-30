@@ -9,8 +9,8 @@ const CodySection = () => (
       backgroundColor: "#F8F8F8",
     }}
   >
-    <h1>CODY</h1>
-    <h2 style={{ fontSize: "40px" }}>O que falar do nosso bot assistente?</h2>
+    <h1 style={{ fontSize: "40px" }}>CODY</h1>
+    <h2>O que falar do nosso bot assistente?</h2>
     <div
       style={{
         display: "flex",

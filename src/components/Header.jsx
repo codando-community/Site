@@ -1,21 +1,18 @@
 import { useEffect, useState } from "react";
 import { AppBar, Toolbar, Box, Button } from "@mui/material";
-import { useNavigate, useLocation } from "react-router-dom";
 
 const menuItems = [
-  { label: "Quem Somos", id: "quem-somos" },
-  { label: "Áreas de Atuação", id: "area-atuacao" },
-  { label: "Nossos Pilares", id: "pilares" },
-  { label: "Eventos", path: "/eventos" },
-  { label: "FAQ", path: "/faq" },
+  "Quem Somos",
+  "Nossos Pilares",
+  "Projetos",
+  "Eventos",
+  "FAQ",
 ];
 
 const Header = () => {
   const [visibleItems, setVisibleItems] = useState(
     Array(menuItems.length).fill(false)
   );
-  const navigate = useNavigate();
-  const location = useLocation();
 
   useEffect(() => {
     menuItems.forEach((_, i) => {
@@ -29,24 +26,11 @@ const Header = () => {
     });
   }, []);
 
-  const handleClick = (item) => {
-    if (item.path) {
-      navigate(item.path);
-    } else {
-      if (location.pathname !== "/") {
-        navigate("/", { state: { scrollTo: item.id } });
-      } else {
-        const section = document.getElementById(item.id);
-        section?.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-  };
-
   return (
     <AppBar
       position="fixed"
       sx={{
-        backgroundColor: "#141648",
+        background: "linear-gradient(90deg, #3AA4A438 22%, #06082A)",
         height: "60px",
         display: "flex",
         justifyContent: "center",
@@ -74,12 +58,11 @@ const Header = () => {
         </Box>
 
         <Box sx={{ display: "flex", gap: 3 }}>
-          {menuItems.map((item, index) => (
+          {menuItems.map((label, index) => (
             <Button
-              key={item.label}
-              onClick={() => handleClick(item)}
+              key={label}
               sx={{
-                color: "#FFEE23",
+                color: "#FFC42E", // Cor da fonte
                 fontWeight: "bold",
                 fontSize: "0.9rem",
                 textTransform: "none",
@@ -95,7 +78,7 @@ const Header = () => {
                 },
               }}
             >
-              {item.label.toUpperCase()}
+              {label.toUpperCase()}
             </Button>
           ))}
         </Box>
