@@ -1,0 +1,37 @@
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 20px;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.footer-contact {
+  text-align: right;
+  color: #ffc42e;
+  font-size: 20px;
+  padding-right: 20px;
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer-container > img,
+  .footer-container > div {
+    margin: 0 auto;
+  }
+
+  .footer-contact {
+    text-align: center !important;
+    padding: 0 !important;
+  }
+}
