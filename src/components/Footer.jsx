@@ -1,3 +1,5 @@
+import "./Footer.css";
+
 const Footer = () => {
   return (
     <footer
@@ -68,17 +70,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div
-        className="footer-contact"
-        style={{
-          textAlign: "right",
-          color: "#FFC42E",
-          fontSize: "20px",
-          paddingRight: "20px",
-        }}
-      >
-        Entre em contato conosco
-      </div>
+      <div className="footer-contact">Entre em contato conosco</div>
 
       <div
         style={{
@@ -91,37 +83,6 @@ const Footer = () => {
         &copy; {new Date().getFullYear()} Codando Community. Todos os direitos
         reservados.
       </div>
-
-      <style jsx>{`
-        .footer-container {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          padding: 30px 20px;
-          gap: 20px;
-          flex-wrap: wrap;
-          max-width: 100%;
-          box-sizing: border-box;
-        }
-
-        @media (max-width: 600px) {
-          .footer-container {
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            gap: 20px;
-          }
-          .footer-container > img,
-          .footer-container > div {
-            margin: 0 auto;
-          }
-          .footer-contact {
-            text-align: center !important;
-            padding: 0 !important;
-          }
-        }
-      `}</style>
     </footer>
   );
 };

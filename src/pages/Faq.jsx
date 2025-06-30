@@ -1,6 +1,6 @@
 
 
-const FAQ = () => {
+const Faq = () => {
     return (
         <div>
             <h1>FAQ</h1>
@@ -8,4 +8,4 @@ const FAQ = () => {
     );
 };
 
-export default FAQ;
+export default Faq;
