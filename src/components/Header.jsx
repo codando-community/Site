@@ -22,70 +22,68 @@ const Header = () => {
           newState[i] = true;
           return newState;
         });
-      }, i * 200); // Delay entre os botões
+      }, i * 200);
     });
   }, []);
 
   return (
-    <>
-      <AppBar
-        position="fixed"
+    <AppBar
+      position="fixed"
+      sx={{
+        background: "linear-gradient(90deg, #3AA4A438 22%, #06082A)",
+        height: "60px",
+        display: "flex",
+        justifyContent: "center",
+        boxShadow: "none",
+        fontFamily: "Montserrat, sans-serif",
+      }}
+    >
+      <Toolbar
         sx={{
-          backgroundColor: "#141648",
-          height: "60px",
           display: "flex",
-          justifyContent: "center",
-          boxShadow: "none",
-          fontFamily: "Montserrat, sans-serif",
+          justifyContent: "space-between",
+          width: "100%",
+          maxWidth: "1280px",
+          margin: "0 auto",
+          padding: "0 16px",
+          minHeight: "60px !important",
         }}
       >
-        <Toolbar
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            width: "100%",
-            maxWidth: "1280px",
-            margin: "0 auto",
-            padding: "0 16px",
-            minHeight: "60px !important",
-          }}
-        >
-          <Box sx={{ display: "flex", alignItems: "center" }}>
-            <img
-              src="/codando-logo-icon.svg"
-              alt="Logotipo Codando"
-              style={{ width: 40, height: 40 }}
-            />
-          </Box>
+        <Box sx={{ display: "flex", alignItems: "center" }}>
+          <img
+            src="/codando-logo-icon.svg"
+            alt="Logotipo Codando"
+            style={{ width: 40, height: 40 }}
+          />
+        </Box>
 
-          <Box sx={{ display: "flex", gap: 3 }}>
-            {menuItems.map((label, index) => (
-              <Button
-                key={label}
-                sx={{
-                  color: "#FFEE23",
-                  fontWeight: "bold",
-                  fontSize: "0.9rem",
-                  textTransform: "none",
-                  fontFamily: "Montserrat",
-                  opacity: visibleItems[index] ? 1 : 0,
-                  transform: visibleItems[index]
-                    ? "translateY(0)"
-                    : "translateY(-10px)",
-                  transition: "opacity 0.5s ease-out, transform 0.5s ease-out",
-                  "&:hover": {
-                    color: "#FFFFFF",
-                    textDecoration: "underline",
-                  },
-                }}
-              >
-                {label.toUpperCase()}
-              </Button>
-            ))}
-          </Box>
-        </Toolbar>
-      </AppBar>
-    </>
+        <Box sx={{ display: "flex", gap: 3 }}>
+          {menuItems.map((label, index) => (
+            <Button
+              key={label}
+              sx={{
+                color: "#FFC42E", // Cor da fonte
+                fontWeight: "bold",
+                fontSize: "0.9rem",
+                textTransform: "none",
+                fontFamily: "Montserrat",
+                opacity: visibleItems[index] ? 1 : 0,
+                transform: visibleItems[index]
+                  ? "translateY(0)"
+                  : "translateY(-10px)",
+                transition: "opacity 0.5s ease-out, transform 0.5s ease-out",
+                "&:hover": {
+                  color: "#FFFFFF",
+                  textDecoration: "underline",
+                },
+              }}
+            >
+              {label.toUpperCase()}
+            </Button>
+          ))}
+        </Box>
+      </Toolbar>
+    </AppBar>
   );
 };
 
