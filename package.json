@@ -16,8 +16,12 @@
     "@mui/material": "^7.0.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+<<<<<<< HEAD
     "react-router-dom": "^7.6.3",
     "swiper": "^12.1.4"
+=======
+    "react-router-dom": "^7.6.3"
+>>>>>>> 702039546e8d9bb1de357b7f70f134bad3ccc936
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
