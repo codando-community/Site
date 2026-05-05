@@ -1,0 +1,116 @@
+.agendaContainer {
+  width: 100%;
+  padding: 4rem 0;
+  background-color: transparent; 
+}
+
+.swiperContainer {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiperSlide {
+  width: 85%;
+  max-width: 800px;
+  height: 320px;
+}
+
+.bannerCard {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  transition: transform 0.3s ease;
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.yellow {
+  background: linear-gradient(135deg, #FFCA28 0%, #FF8F00 100%);
+  color: #141648;
+}
+
+.purple {
+  background: radial-gradient(circle at top right, #311B92 0%, #1A0033 100%);
+}
+
+.blue {
+  background: linear-gradient(135deg, #001A33 0%, #0D47A1 100%);
+}
+
+.dateTag {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #FFCA28;
+}
+
+.dayTime {
+  margin-left: 0.5rem;
+  color: #fff;
+  font-weight: 400;
+}
+
+.yellow .dateTag {
+  background: rgba(255, 255, 255, 0.3);
+  color: #141648;
+}
+
+.yellow .dayTime {
+  color: #141648;
+}
+
+.bannerTitle {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  letter-spacing: -1px;
+}
+
+.bannerSubtitle {
+  font-size: 1.25rem;
+  font-weight: 500;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+.bannerSpeaker {
+  margin-top: auto;
+  font-size: 1rem;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+/* Pagination Overrides */
+:global(.swiper-pagination-bullet) {
+  background-color: #fff !important;
+  opacity: 0.4 !important;
+  width: 12px !important;
+  height: 12px !important;
+}
+
+:global(.swiper-pagination-bullet-active) {
+  background-color: #d81b60 !important;
+  opacity: 1 !important;
+  transform: scale(1.2);
+}

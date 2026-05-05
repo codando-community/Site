@@ -1,0 +1,64 @@
+
+
+.background {
+    background: linear-gradient(to top, #315458, #243f42 , #000000 50%)
+}
+h1.titulo {
+    font-size: 50px;
+}
+.subtituloEsquerda{
+    text-align: left;
+}
+.ousadiaImage{
+    margin-left: 27%;
+    width:20%;
+}
+.aprendizadoImage{
+    margin-right: 5%;
+    width: 20%;
+}
+.compartilharImage{
+    margin-left: 27%;
+    width: 20%;
+}
+.ousadiaContainer{
+    display:flex;
+    flex-direction: row;    
+    margin-left: 5%;
+    font-size: 25px;
+    margin-top: 100px;
+}
+.aprendizadoContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px;
+    font-size: 25px;
+    margin-top: 100px;
+}
+.compartilharContainer {
+    display:flex;
+    flex-direction: row;
+    margin-left: 5%;
+    font-size: 25px;
+    margin-top: 100px;
+    margin-bottom: 10%;
+}
+.ousadiaConteudo{
+    display: flex;
+    flex-direction: column;
+}
+.aprendizadoConteudo{
+    display: flex;
+    flex-direction: column;
+    margin-right: 10%;
+    margin-left: 0%;
+}
+.compartilharConteudo{
+    display: flex;
+    flex-direction: column;
+}
+p { 
+    font-size: 30pt;
+    text-align: left;
+}

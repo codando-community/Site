@@ -1,0 +1,99 @@
+.appBar {
+  position: relative;
+  background: linear-gradient(to right, #010A2A, #3097AE42 26%);
+  box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-bottom: 2px solid #FFC42E;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
+  min-height: 60px !important;
+}
+
+.logoBox {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.menuBox {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.menuButton {
+  color: #ffc42e !important;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: none;
+  font-family: "Montserrat", sans-serif;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out, color 0.15s ease;
+}
+
+.menuButton:hover {
+  color: #ffffff !important;
+  text-decoration: underline;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.iconButton {
+  color: #ffc42e !important;
+  padding: 4px;
+  background: transparent;
+  border-radius: 4px;
+}
+
+.iconButton:hover {
+  color: #ffffff !important;
+  background: rgba(255,255,255,0.03);
+}
+
+.icon,
+.iconButton svg {
+  color: inherit;
+  fill: currentColor !important;
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.searchInput {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  border: none;
+  outline: none;
+}
+
+.iconButton:focus-visible,
+.menuButton:focus-visible {
+  box-shadow: 0 0 0 3px rgba(255,196,46,0.12);
+  outline: none;
+}
