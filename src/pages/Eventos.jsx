@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";
 import AgendaSection from "../components/home/AgendaSection";
 import EventosListSection from "../components/home/EventosListSection";
@@ -9,15 +8,6 @@ const Eventos = () => {
             <AgendaSection />
             <EventosListSection />
         </div>
-=======
-
-
-const Eventos = () => {
-    return (
-        <>
-            <h1>Eventos</h1>
-        </>
->>>>>>> 702039546e8d9bb1de357b7f70f134bad3ccc936
     );
 };
 

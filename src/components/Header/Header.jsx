@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-<<<<<<< HEAD
+
+import { Link } from "react-router-dom";
+
 import { useNavigate, useLocation } from "react-router-dom";
-=======
->>>>>>> 702039546e8d9bb1de357b7f70f134bad3ccc936
+
 import { AppBar, Toolbar, Box, Button, IconButton, InputBase } from "@mui/material";
 import AccessibilityNewIcon from "@mui/icons-material/AccessibilityNew";
 import SearchIcon from "@mui/icons-material/Search";
@@ -12,11 +13,10 @@ import styles from "./Header.module.css";
 const menuItems = ["Quem Somos", "Nossos Pilares", "Agenda", "FAQ"];
 
 const Header = () => {
-<<<<<<< HEAD
+
   const navigate = useNavigate();
   const location = useLocation();
-=======
->>>>>>> 702039546e8d9bb1de357b7f70f134bad3ccc936
+
   const [visibleItems, setVisibleItems] = useState(Array(menuItems.length).fill(false));
   const [showSearch, setShowSearch] = useState(false);
 
@@ -45,7 +45,7 @@ const Header = () => {
             <Button
               key={label}
               className={`${styles.menuButton} ${visibleItems[index] ? styles.visible : ""}`}
-<<<<<<< HEAD
+
               onClick={() => {
                 const sectionId = label.toLowerCase().replace(" ", "-");
                 
@@ -64,8 +64,7 @@ const Header = () => {
                   }
                 }
               }}
-=======
->>>>>>> 702039546e8d9bb1de357b7f70f134bad3ccc936
+
             >
               {label.toUpperCase()}
             </Button>
