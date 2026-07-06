@@ -1,56 +1,32 @@
-import { Button } from "@mui/material";
+import styles from "./HeroSection.module.css";
+import SocialLinks from "../SocialLinks/SocialLinks";
 
-const socialLinks = [
-  { name: "Discord", icon: "/logo-discord.svg" },
-  { name: "Instagram", icon: "/logo-instagram.svg" },
-  { name: "Youtube", icon: "/logo-youtube.svg" },
-  { name: "Linkedin", icon: "/logo-linkedin.svg" },
-  { name: "Sympla", icon: "/logo-sympla.svg" },
-];
+const HeroSection = () => {
+  return (
+    <header className={styles.hero}>
+      <div className={styles.orangeGlow} />
+      <div className={styles.blueGlow} />
 
-const HeroSection = () => (
-  <section
-    style={{
-      backgroundColor: "#141648",
-      color: "#FFEE23",
-      textAlign: "center",
-      padding: "200px 16px 100px",
-    }}
-  >
-    <h1>CODANDO COMMUNITY</h1>
-    <h2 style={{ fontSize: 20 }}>MAY THE COMMUNITY BE WITH YOU</h2>
-    <h2 style={{ fontWeight: "bold" }}>NOSSAS REDES</h2>
-    <div
-      style={{
-        display: "flex",
-        gap: 20,
-        marginBottom: 20,
-        justifyContent: "center",
-        flexWrap: "wrap",
-      }}
-    >
-      {socialLinks.map((social) => (
-        <Button
-          key={social.name}
-          variant="text"
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            textTransform: "none",
-            color: "#FFF",
-          }}
-        >
-          <img
-            src={social.icon}
-            alt={social.name}
-            style={{ width: 50, height: 50, marginBottom: 8 }}
-          />
-          {social.name}
-        </Button>
-      ))}
-    </div>
-  </section>
-);
+      <div className={styles.heroContent}>
+        <h1>CODANDO COMMUNITY</h1>
+
+        <p>MAY THE COMMUNITY BE WITH YOU</p>
+
+        <img className={styles.heroHand} src="/src/assets/hand.png" alt="Hand gesture" />
+      </div>
+
+      <section
+        className={styles.heroSocials}
+        aria-labelledby="social-title"
+      >
+        <h2 id="social-title">
+          NOSSAS REDES
+        </h2>
+
+        <SocialLinks variant="hero" />
+      </section>
+    </header>
+  );
+};
 
 export default HeroSection;

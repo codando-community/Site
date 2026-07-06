@@ -1,0 +1,80 @@
+.footer {
+  background: linear-gradient(
+    90deg,
+    #010a2a 0%,
+    #154747 100%
+  );
+
+  padding: 28px 56px 12px;
+
+  font-family: "Montserrat", sans-serif;
+}
+
+.topRow {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 2rem;
+}
+
+.logo {
+  width: 180px;
+  height: auto;
+
+   transform: translateY(8px);
+}
+
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 14px;
+}
+
+.contact {
+  margin: 0;
+
+  color: #ffc42e;
+
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.copyright {
+  display: block;
+
+  margin-top: 28px;
+
+  text-align: center;
+
+  color: #ffc42e;
+
+  font-size: 11px;
+
+  opacity: .85;
+}
+
+@media (max-width: 768px) {
+
+  .footer {
+    padding: 32px 24px;
+  }
+
+  .topRow {
+    flex-direction: column;
+
+    gap: 32px;
+  }
+
+  .rightColumn {
+    align-items: center;
+  }
+
+  .contact {
+    text-align: center;
+  }
+
+}

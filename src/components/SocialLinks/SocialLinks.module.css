@@ -1,0 +1,58 @@
+.socialLinks {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.socialLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: white;
+  text-decoration: none;
+
+  transition: transform 0.3s ease;
+}
+
+.socialLink:hover {
+  transform: translateY(-6px);
+}
+
+.socialIcon {
+  object-fit: contain;
+}
+
+/* HERO */
+
+.hero {
+  gap: 4rem;
+}
+
+.hero .socialIcon {
+  width: 90px;
+  height: 90px;
+
+  filter:
+    drop-shadow(0 0 10px rgba(255,255,255,.4))
+    drop-shadow(0 0 20px rgba(255,255,255,.2));
+}
+
+.hero span {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+/* FOOTER */
+
+.footer {
+  gap: 1rem;
+}
+
+.footer .socialIcon {
+  width: 50px;
+  height: 50px;
+}
+
+.footer span {
+  display: none;
+}
