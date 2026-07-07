@@ -1,31 +1,47 @@
+import styles from "./CodySection.module.css";
 import codyImage from "../../assets/cody.svg";
 
-const CodySection = () => (
-  <section
-    style={{
-      padding: "2%",
-      textAlign: "center",
-      color: "#000",
-      backgroundColor: "#F8F8F8",
-    }}
-  >
-    <h1 style={{ fontSize: "40px" }}>CODY</h1>
-    <h2>O que falar do nosso bot assistente?</h2>
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        gap: "40px",
-        marginTop: "20px",
-        flexWrap: "wrap",
-      }}
+const CodySection = () => {
+  return (
+    <section
+      id="cody"
+      className={styles.section}
+      aria-labelledby="cody-title"
     >
-      <img src={codyImage} alt="Cody" style={{ width: "300px" }} />
-      <p style={{ maxWidth: "400px", textAlign: "left" }}>
-        Presente no Discord e neste site, o Cody surgiu para automatizar processos como autenticação, dúvidas e ajudar na segurança.
-      </p>
-    </div>
-  </section>
-);
+      <div className={styles.container}>
+        <h2
+          id="cody-title"
+          className={styles.title}
+        >
+          Cody
+        </h2>
+
+        <p className={styles.subtitle}>
+          O que falar do nosso bot assistente?
+        </p>
+
+        <div className={styles.content}>
+          <div className={styles.imageContainer}>
+            <img
+              src={codyImage}
+              alt="Ilustração do Cody, assistente da comunidade Codando"
+              className={styles.image}
+            />
+          </div>
+
+          <div className={styles.textContainer}>
+            <p className={styles.description}>
+              Presente em nosso servidor do Discord e aqui mesmo nesse site,
+              ele surgiu com o intuito de facilitar e automatizar os processos
+              realizados como autenticação ou liberar um cargo específico,
+              além de esclarecer as mais diversas dúvidas e ajudar a manter o
+              ambiente seguro e saudável.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
 
 export default CodySection;
