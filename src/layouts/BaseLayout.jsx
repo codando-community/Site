@@ -1,6 +1,7 @@
 import Header from "../components/Header/Header.jsx";
 import Footer from "../components/Footer";
 import { Outlet } from "react-router-dom";
+import CodyBubble from "../components/CoddyBubble/CodyBubble.jsx";
 
 const BaseLayout = ({ children }) => {
   return (
@@ -8,6 +9,7 @@ const BaseLayout = ({ children }) => {
       <Header />
         <Outlet />
       <Footer />
+      <CodyBubble />
     </>
   );
 };
