@@ -1,14 +1,16 @@
 .container {
     position: fixed;
 
-    right: 28px;
-    bottom: 28px;
+  right: 32px;
 
-    display: flex;
-    align-items: center;
-    gap: 14px;
+  top: 50%;
+  transform: translateY(-50%);
 
-    z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  z-index: 9999;
 }
 
 /* ---------- Tooltip ---------- */
@@ -48,8 +50,8 @@
 /* ---------- Bubble ---------- */
 
 .bubble {
-    width: 72px;
-    height: 72px;
+    width: 100px;
+    height: 100px;
 
     border: 3px solid #FFC42E;
 
@@ -79,8 +81,8 @@
 }
 
 .icon {
-    width: 60px;
-    height: 60px;
+    width: 92px;
+    height: 92px;
 
     object-fit: cover;
 
