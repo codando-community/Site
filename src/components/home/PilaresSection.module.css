@@ -1,64 +1,149 @@
+.section {
+  padding: 120px 48px;
 
+  background: linear-gradient(
+    180deg,
+    #000000 0%,
+    #071223 35%,
+    #16373a 72%,
+    #315458 100%
+  );
+}
 
-.background {
-    background: linear-gradient(to top, #315458, #243f42 , #000000 50%)
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
 }
-h1.titulo {
-    font-size: 50px;
+
+.title {
+  margin: 0 0 110px;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+
+  color: #fff;
 }
-.subtituloEsquerda{
-    text-align: left;
+
+/* ===== Each pillar ===== */
+
+.pillarRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 90px;
+
+  margin-bottom: 120px;
 }
-.ousadiaImage{
-    margin-left: 27%;
-    width:20%;
+
+.pillarContent {
+  flex: 1;
+  max-width: 700px;
 }
-.aprendizadoImage{
-    margin-right: 5%;
-    width: 20%;
+
+.pillarTitle {
+  margin: 0 0 36px;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+
+  color: white;
+
+  text-align: left;
 }
-.compartilharImage{
-    margin-left: 27%;
-    width: 20%;
+
+.centerTitle {
+  text-align: center;
 }
-.ousadiaContainer{
-    display:flex;
-    flex-direction: row;    
-    margin-left: 5%;
-    font-size: 25px;
-    margin-top: 100px;
+
+.pillarText {
+  margin: 0;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 150%;
+
+  color: white;
+
+  text-align: left;
 }
-.aprendizadoContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 20px;
-    font-size: 25px;
-    margin-top: 100px;
+
+.pillarImage {
+  width: 310px;
+  height: auto;
+
+  flex-shrink: 0;
 }
-.compartilharContainer {
-    display:flex;
-    flex-direction: row;
-    margin-left: 5%;
-    font-size: 25px;
-    margin-top: 100px;
-    margin-bottom: 10%;
+
+/* Remove bottom margin on last row */
+
+.pillarRow:last-child {
+  margin-bottom: 0;
 }
-.ousadiaConteudo{
-    display: flex;
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media (max-width: 992px) {
+  .section {
+    padding: 90px 24px;
+  }
+
+  .pillarRow {
     flex-direction: column;
+    gap: 40px;
+
+    text-align: center;
+  }
+
+  /*
+    Only the second pillar has the image first.
+    On mobile we want text first for every pillar.
+  */
+
+  .pillarRow:nth-child(3) {
+    flex-direction: column-reverse;
+  }
+
+  .pillarContent {
+    max-width: 100%;
+  }
+
+  .pillarTitle,
+  .centerTitle {
+    text-align: center;
+  }
+
+  .pillarText {
+    text-align: center;
+  }
+
+  .pillarImage {
+    width: 230px;
+  }
 }
-.aprendizadoConteudo{
-    display: flex;
-    flex-direction: column;
-    margin-right: 10%;
-    margin-left: 0%;
-}
-.compartilharConteudo{
-    display: flex;
-    flex-direction: column;
-}
-p { 
-    font-size: 30pt;
-    text-align: left;
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 32px;
+
+    margin-bottom: 70px;
+  }
+
+  .pillarTitle {
+    font-size: 26px;
+  }
+
+  .pillarText {
+    font-size: 20px;
+  }
+
+  .pillarImage {
+    width: 190px;
+  }
 }
