@@ -1,81 +1,71 @@
 import { useRef } from "react";
+import styles from "./AreaAtuacaoSection.module.css";
+
+const areas = [
+  "Desenvolvimento Web",
+  "Data Science",
+  "Inteligência Artificial",
+  "Segurança da Informação",
+  "Desenvolvimento Mobile",
+  "DevOps",
+];
 
 const AreaAtuacaoSection = () => {
   const carouselRef = useRef(null);
-  const areas = [
-    "Desenvolvimento Web",
-    "Data Science",
-    "Inteligência Artificial",
-    "Segurança da Informação",
-    "Desenvolvimento Mobile",
-    "DevOps",
-  ];
 
   const scroll = (offset) => {
-    carouselRef.current?.scrollBy({ left: offset, behavior: "smooth" });
+    carouselRef.current?.scrollBy({
+      left: offset,
+      behavior: "smooth",
+    });
   };
 
   return (
     <section
       id="area-atuacao"
-      style={{ padding: "2%", textAlign: "center", backgroundColor: "#fff" }}
+      className={styles.section}
+      aria-labelledby="areas-title"
     >
-      <h1 style={{ marginBottom: "30px" }}>ÁREAS DE ATUAÇÃO</h1>
-      <div
-        style={{
-          position: "relative",
-          width: "100%",
-          display: "flex",
-          alignItems: "center",
-        }}
+      <h2
+        id="areas-title"
+        className={styles.title}
       >
-        <button onClick={() => scroll(-300)} style={navBtn("left")}>&#60;</button>
+        ÁREAS DE ATUAÇÃO
+      </h2>
+
+      <div className={styles.carouselWrapper}>
+        <button
+          className={`${styles.arrow} ${styles.left}`}
+          onClick={() => scroll(-320)}
+          aria-label="Área anterior"
+        >
+          &#8249;
+        </button>
+
         <div
           ref={carouselRef}
-          style={{
-            display: "flex",
-            overflowX: "auto",
-            gap: "20px",
-            scrollBehavior: "smooth",
-            padding: "10px",
-            width: "100%",
-            flexWrap: "nowrap",
-          }}
+          className={styles.carousel}
         >
-          {areas.map((area, idx) => (
-            <div key={idx} style={card}>
-              <p>{area}</p>
-            </div>
+          {areas.map((area) => (
+            <article
+              key={area}
+              className={styles.card}
+            >
+              <h3>{area}</h3>
+            </article>
           ))}
         </div>
-        <button onClick={() => scroll(300)} style={navBtn("right")}>&#62;</button>
+
+        <button
+          className={`${styles.arrow} ${styles.right}`}
+          onClick={() => scroll(320)}
+          aria-label="Próxima área"
+        >
+          &#8250;
+        </button>
       </div>
     </section>
   );
-};
-
-const navBtn = (position) => ({
-  position: "absolute",
-  [position]: "10px",
-  backgroundColor: "#000",
-  color: "#FFC42ECC",
-  border: "none",
-  borderRadius: "50%",
-  width: "40px",
-  height: "40px",
-  cursor: "pointer",
-  zIndex: 1,
-});
-
-const card = {
-  minWidth: "250px",
-  height: "300px",
-  backgroundColor: "#f0f0f0",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  borderRadius: "10px",
-  boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
 };
 
 export default AreaAtuacaoSection;

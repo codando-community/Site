@@ -1,0 +1,107 @@
+.section {
+  padding: 72px 0;
+
+  background: #ffffff;
+}
+
+.title {
+  margin-bottom: 48px;
+
+  text-align: center;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+
+  color: #111;
+}
+
+.carouselWrapper {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+}
+
+.carousel {
+  display: flex;
+
+  gap: 6px;
+
+  overflow-x: auto;
+
+  scroll-behavior: smooth;
+
+  scrollbar-width: none;
+
+  width: 100%;
+
+  padding: 0 40px;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  flex: 0 0 320px;
+
+  height: 420px;
+
+  background: linear-gradient(
+    180deg,
+    #010a2a 0%,
+    #154747 100%
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+
+  transition: transform .3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card h3 {
+  padding: 24px;
+
+  text-align: center;
+
+  font-size: 26px;
+}
+
+.arrow {
+  position: absolute;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 54px;
+  height: 54px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #ffc42e;
+
+  font-size: 52px;
+
+  cursor: pointer;
+
+  z-index: 10;
+}
+
+.left {
+  left: 4px;
+}
+
+.right {
+  right: 4px;
+}
